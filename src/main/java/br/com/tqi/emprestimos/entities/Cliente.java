@@ -33,7 +33,7 @@ public class Cliente {
 	@Column(nullable = false, unique = true)
 	private String cpf;
 	
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String rg;
 	
 	@Column(nullable = false)
