@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.tqi.emprestimos.dto.response.ClienteResponseDTO;
+import br.com.tqi.emprestimos.dto.response.MensagemResponseDTO;
 import br.com.tqi.emprestimos.entities.Cliente;
 import br.com.tqi.emprestimos.repositories.ClienteRespository;
 
@@ -19,6 +20,15 @@ public class ClienteService {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	public MensagemResponseDTO cadastrarCliente(Cliente cliente) {
+		
+		repository.save(cliente);
+		return MensagemResponseDTO
+				.builder()
+				.mensagem("Cliente Criado com Sucesso!")
+				.build();
+	}
 	
 	public List<ClienteResponseDTO> findAll(){
 		
