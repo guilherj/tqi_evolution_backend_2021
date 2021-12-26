@@ -1,0 +1,3 @@
+insert into tb_endereco (cep, cidade, complemento, estado, logradouro, numero, pais) values ('25233-423', 'Duque de Caxias', 'Lote 05 Quadra 03', 'Rio de Janeiro', 'Rua Nilo Casemiro', 0, 'Brasil');
+insert into tb_cliente (cpf, email,nome,renda,rg,senha,endereco_id) values ('12345678900', 'guilherme@gmail.com', 'Guilherme', 3000.00, '12345678', '123', 1);
+insert into tb_cliente (cpf, email,nome,renda,rg,senha,endereco_id) values ('22222222222', 'lidiane@gmail.com', 'Lidiane', 3500.00, '22222222', '123', 1);
