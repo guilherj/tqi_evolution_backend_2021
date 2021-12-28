@@ -1,6 +1,5 @@
 package br.com.tqi.emprestimos.dto.response;
 
-import br.com.tqi.emprestimos.entities.Endereco;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +22,6 @@ public class ClienteResponseDTO {
 	
 	private Double renda;
 		
-	private Endereco endereco;
 	
 
 }

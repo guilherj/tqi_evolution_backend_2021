@@ -37,16 +37,30 @@ public class Cliente {
 	private String rg;
 	
 	@Column(nullable = false)
+	private String logradouro;
+	
+	@Column(nullable = false)
+	private Integer numero;
+	
+	private String complemento;
+	
+	@Column(nullable = false)
+	private String cidade;
+	
+	@Column(nullable = false)
+	private String estado;
+	
+	@Column(nullable = false)
+	private String pais;
+	
+	@Column(nullable = false)
+	private String cep;
+	
+	@Column(nullable = false)
 	private Double renda;
 	
 	@Column(nullable = false)
 	private String senha;
-	
-	@ManyToOne
-	@JoinColumn(name = "endereco_id")
-	private Endereco endereco;
-	
-	
 	
 
 }

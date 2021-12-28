@@ -7,21 +7,24 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.tqi.emprestimos.dto.request.ClienteRequestDTO;
 import br.com.tqi.emprestimos.dto.response.ClienteResponseDTO;
 import br.com.tqi.emprestimos.dto.response.MensagemResponseDTO;
 import br.com.tqi.emprestimos.entities.Cliente;
-import br.com.tqi.emprestimos.repositories.ClienteRespository;
+import br.com.tqi.emprestimos.repositories.ClienteRepository;
 
 @Service
 public class ClienteService {
 	
 	@Autowired
-	private ClienteRespository repository;
+	private ClienteRepository repository;
 	
 	@Autowired
 	private ModelMapper modelMapper;
 	
-	public MensagemResponseDTO cadastrarCliente(Cliente cliente) {
+	public MensagemResponseDTO cadastrarCliente(ClienteRequestDTO clienteRequestDTO) {
+		
+		Cliente cliente = modelMapper.map(clienteRequestDTO, Cliente.class);
 		
 		repository.save(cliente);
 		return MensagemResponseDTO
