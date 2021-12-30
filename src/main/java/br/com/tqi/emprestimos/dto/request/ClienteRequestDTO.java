@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClienteRequestDTO {
 	
-private String nome;
+    private String nome;
 	
 	private String email;
 	
