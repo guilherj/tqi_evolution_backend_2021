@@ -1,4 +1,4 @@
-package br.com.tqi.emprestimos.core;
+package br.com.tqi.emprestimos.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.tqi.emprestimos.dto.request.ClienteRequestDTO;
 import br.com.tqi.emprestimos.dto.response.ClienteResponseDTO;
 import br.com.tqi.emprestimos.dto.response.MensagemResponseDTO;
-import br.com.tqi.emprestimos.exception.ClienteException;
 import br.com.tqi.emprestimos.services.ClienteService;
 
 @RestController
