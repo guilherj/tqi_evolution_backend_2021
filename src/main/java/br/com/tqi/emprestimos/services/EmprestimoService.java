@@ -29,13 +29,15 @@ public class EmprestimoService {
 		if((emprestimoRequestDTO.getDataPrimeiraParcela().isBefore(dataLimite)) || 
 				(emprestimoRequestDTO.getDataPrimeiraParcela().equals(dataLimite))) {
 			
-			msg = "Emprestimo Criado com sucesso!";
-			repository.save(emprestimo);
+			if((emprestimoRequestDTO.getQtdParcelas() <= 60) && 
+				(emprestimoRequestDTO.getQtdParcelas() >= 1)) {
+				
+				msg = "Emprestimo Criado com sucesso!";
+				repository.save(emprestimo);
 			
-			
-		} else {
-			msg = "Data da primeira parcela inválida!";
-		}
+			} else msg = "A quantidade máxima de parcelas é 60";
+						
+		} else msg = "Data da primeira parcela não pode ser maior que 60 dias";
 		
 		return MensagemResponseDTO.builder().mensagem(msg).build();
 		

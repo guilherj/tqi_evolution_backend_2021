@@ -1,8 +1,6 @@
-package br.com.tqi.emprestimos.dto.request;
+package br.com.tqi.emprestimos.dto.response;
 
 import java.time.LocalDate;
-
-import javax.validation.constraints.Max;
 
 import br.com.tqi.emprestimos.entities.Cliente;
 import lombok.AllArgsConstructor;
@@ -12,7 +10,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmprestimoRequestDTO {
+public class EmprestimoDetalhesResponse {
+	
+	private Long id;
 	
 	private Double valor;
 	
@@ -21,8 +21,5 @@ public class EmprestimoRequestDTO {
 	private Integer qtdParcelas;
 	
 	private Cliente cliente;
-	
-	
-	
 
 }
