@@ -7,14 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmprestimoListagemResponse {
+public class ClienteEmpDetalhesResponseDTO {
 	
-	private Long id;
+	private String emailCliente;
 	
-	private Double valor;
-	
-	private Integer qtdParcelas;
-	
-	
-	
+	private Double rendaCliente;
+
 }
