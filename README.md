@@ -69,7 +69,7 @@ Eu tentei criar esta API utilizando todo o conhecimento adquirido no bootcamp e 
 <h2> 🧮 FUNCIONALIDADES DA API </h2>
 
 <p>
-<h3> 🔸 Cadastrar Cliente</h3><br>
+<h3> 🔸 Cadastrar Cliente</h3>
 
 - **Verbo HTTP:** POST<br>
 - **Endpoint:** "/cliente"<br>
