@@ -1,151 +1,109 @@
-<h1> Desafio: Aprenda na Prática Programação Orientada a Objetos</h1>
-
-<p> Sejam bem-vindos ao desafio: <strong>APRENDENDO NA PRÁTICA O PARADIGMA DE ORIENTAÇÃO A OBJETOS.</strong><br>Desafio este que tive a honra de co-criar com a plataforma de cursos online <strong><a href="https://web.digitalinnovation.one/">DIGITAL INNOVATION ONE</a></strong> 💛🧡 e disponibilizado de forma gratuita para a comunidade dos desenvolvedores Java.<br>
-    💎 O objetivo principal é colocar em prática umas das principais ferramentas da OO: <strong>ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO,</strong> através de um projeto Java. </p>
+<h1 align="center"> Projeto TQI: API para Sistema de Avaliação de Créditos </h1>
 
 
+<h2 align="center"> ‼️ NÃO PENSE QUE É CAPAZ. SAIBA QUE É ‼️ </h2>
 
-<h2>🛑 Pré-Requisitos</h2>
+<h2> 📚 Desafio Proposto</h2>
+
+Dado o cenário abaixo, elabore uma sugestão para o back-end necessária para resolver o problema.
+Use a criatividade! Você pode explorar aqui todos os seus conhecimentos, demonstrando fluxos, telas, protótipos e/ou codificação.
+É importante sabermos por que você decidiu fazer a solução, portanto deixe clara a motivação das suas escolhas.
+
+Uma empresa de empréstimo precisa criar um sistema de análise de crédito para fornecer aos seus clientes as seguintes funcionalidades:
+
+<h3>🔺 i. Cadastro de clientes</h3>
+O cliente pode cadastrar: nome, e-mail, CPF, RG, endereço completo, renda e senha.<br><br>
+ 
+ <h3>🔺 ii. Login </h3>
+ A autenticação será realizada por e-mail e senha.<br><br>
+ 
+<h3>🔺 iii. Solicitação de empréstimo </h3>
+Para solicitar um empréstimo, precisamos do valor do empréstimo, data da primeira parcela e quantidade de parcelas.<br>
+O máximo de parcelas será 60 e a data da primeira parcela deve ser no máximo 3 meses após o dia atual.<br><br>
+
+<h3>🔺 iv. Acompanhamento das solicitações de empréstimo </h3>
+O cliente pode visualizar a lista de empréstimos solicitados por ele mesmo e também os detalhes de um de seus empréstimos.<br>
+Na listagem, devemos retornar no mínimo o código do empréstimo, o valor e a quantidade de parcelas.<br>
+No detalhe do empréstimo, devemos retornar: código do empréstimo, valor, quantidade de parcelas, data da primeira parcela, e-mail do cliente e renda do cliente.<br>
+    
+----
+<h2>🛑 Restrição</h2>
 
 <p>
-✅ Conhecer a sintaxe da Java<br>
-✅ Java JDK 11<br>
-✅ IDE para desenvolvimento Java (usarei IntelliJ)<br>
-✅ Git<br>
-✅ Conta no GitHub<br>
-</p>
-
-
-<h2> 👣 Passo-a-Passo</h2>
-
-<p>
-<strong>	1.</strong> Vamos ABSTRAIR o DOMÍNIO Bootcamp e MODELAR seus ATRIBUTOS E MÉTODOS <br>
-<strong>	2.</strong> Criaremos as CLASSES: Bootcamp, Cursos, Mentorias e Devs e vamos relaciona-las <br>
-<strong>	3.</strong> As CLASSES Curso, Mentoria e Devs também serão MODELADOS, ou seja, criaremos seus ATRIBUTOS E MÉTODOS <br> 
-<strong>	4.</strong> Para que o código fique mais legível e de fácil manutenção, iremos utilizar de algumas das ferramentas que o PARADIGMA DE ORIENTAÇÃO A OBJETOS (POO) nos oferece: ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO <br>
-<strong>	5.</strong> E para representar CLASSES que foram criadas e relacionadas, iremos transforma-las em OBJETOS<br>
+A implementação deve utilizar linguagem Java ou Kotlin.<br>
 </p>
 
 ----
 
-<h2> 📚 Paradigma de Programação Orientado a Objetos (POO) </h2>
+<h2> 👣 Minha Solução </h2>
 
 <p>
-A visão de Orientação a Objetos (OO) é aquela de um mundo de objetos que interagem.<br>
-Este paradigma é um modelo de análise, projeto e programação baseado na aproximação entre o mundo real e o mundo virtual, através da criação e interação entre classes, atributos, métodos, objetos, entre outros.<br>
-São 4 os pilares principais do POO: ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO. 
+Minha idéia de solução para o desafio proposto foi de desenvolver uma API Rest com conexão com Banco de dados para servir de<br>
+Back-End para um site que pode ser desenvolvido pela equipe de Front-End.    
 </p>
 
 
-<h3>🔺 ABSTRAÇÃO:</h3>
+<h3>🔹 DESENVOLVIMENTO:</h3>
 
 <p>
-Habilidade de concentrar-se nos aspectos essenciais de um domínio, ignorando características menos importantes ou acidentais. Nesse contexto, objetos são abstrações de entidades existentes no domínio em questão.</p>
-
-<h3>🔺 ENCAPSULAMENTO:</h3>
-
-<p> Encapsular significa esconder a implementação dos objetos. O encapsulamento favorece principalmente dois aspectos de um sistema: a manutenção e a evolução.</p>
-
-<h3>🔺 HERANÇA:</h3>
-
-<p>Permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de classe base. A classe que herda os membros da classe base é chamada de classe derivada.</p>
-
-<h3> 🔺 POLIMORFISMO:</h3>
-
-<p>Capacidade de um objeto poder ser referenciado de várias formas. Cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele. A capacidade de tratar objetos criados a partir das classes específicas como objetos de uma classe genérica é chamada de polimorfismo.</p>
-<br>
-<h2 align="center"> ‼️ CONCEITOS FUNDAMENTAIS POO ‼️ </h2>
-<p>
-<h3>🔻 DOMÍNIO:</h3> 
-Domínio da aplicação, também conhecida como camada de negócio ou de objetos de negócio, é aquela onde estão localizadas as classes que fazem parte do domínio do problema, ou seja, classes correspondentes a objetos que fazem parte da descrição do problema.
-
-<h3>🔻 CLASSE: </h3> 
-Um elemento do código que tem a função de representar objetos do mundo real. Dentro dela é comum declararmos atributos e métodos, que representam, respectivamente, as características e comportamentos desse objeto.
-
-<h3>🔻 ATRIBUTO: </h3>
-Atributos são, basicamente, a estrutura de dados que vai representar a classe. Os atributos também são conhecidos como VARIÁVEL DE CLASSE, e podem ser divididos em dois tipos básicos: atributos de instância e de classe. 
-
-<h3>🔻 VARIÁVEL: </h3>
-Uma “região de memória (do computador) previamente identificada cuja finalidade é armazenar os dados ou informações de um programa por um determinado espaço de tempo”.
-
-<h3>🔻 MÉTODO: </h3>
-Os métodos representam os estados e ações dos objetos e classes.
-
-<h3>🔻 OBJETO: </h3>
-Em POO, objeto é um "molde" de uma determinada classe, que passa a existir a partir de uma instância da classe. A classe define o comportamento do objeto, usando atributos (propriedades) e métodos (ações).
-Objeto em ciência da computação, é uma referência a um local da memória que possui um valor. Um objeto pode ser uma variável, função, ou estrutura de dados. 
-
-<h3>🔻 INSTÂNCIA: </h3>
-Uma instância de uma classe é um novo objeto criado dessa classe, com o operador new. Instanciar uma classe é criar um novo objeto do mesmo tipo dessa classe. Uma classe somente poderá ser utilizada após ser instanciada.
-
+Eu tentei criar esta API utilizando todo o conhecimento adquirido no bootcamp e em outros conteúdos assistidos anteriormente, utilizando boas práticas de desenvolvimento, programação em camadas, injeção de depenência, invesão de controle, atribuição de responsabilidades as classes e interfaces e etc.
 </p>
+
     
 ------------
-<br>
 
-<h2> 🧮 Linguagem de Programação vs Paradigma de Linguagem de Programação</h2>
+## 🛠️ Técnologias Utilizadas
 
-<p>
-<h3> ✨ LINGUAGEM DE PROGRAMAÇÃO:</h3> 
-É uma linguagem formal que, através de uma série de instruções, permite que um programador escreva um conjunto de ordens, ações consecutivas, dados e algoritmos para criar programas que controlam o comportamento físico e lógico de uma máquina.<br>
-Seguem alguns exemplos de como as linguagens de programação podem ser classificadas:<br>
-<br>
-🔺 Nível de abstração:<br>
-Baixo Nível: Assembly<br>
-Médio Nível: C, C++, D, Objective C, etc.<br>
-Alto Nível: Java, C#, PHP, Javascript, etc.<br>
-Altíssimo Nível: Python, Ruby, Elixir, etc.<br>
-<br>
-🔺 Paradigma de programação:<br>
-Programação Estruturada: C, Pascal, Ada, etc.<br>
-Programação Orientada a Objetos: Java, C#, C++, Objective C, D, etc.<br>
-Programação Funcional: Lisp, Scheme, Erlang, Elixir, etc.<br>
-<br>
-🔺 Linguagens classificadas pela arquitetura da aplicação:<br>
-Desktop: C, C++, Object Pascal, Java, etc.<br>
-Web: PHP, Ruby, Javascript, Java, etc.<br>
-<br>
-🔺 Tipo de execução:<br>
-Linguagens compiladas: C, C++, Pascal, D, GO, etc.<br>
-Linguagens Interpretadas: Python, Ruby, PHP, Javascript, etc.<br>
-Linguagens Hibridas: Java, Erlang, Elixir, etc.<br>
-
-
-<h3> ✨ PARADIGMA DE LINGUAGEM DE PROGRAMAÇÃO</h3> 
-
-É um conjunto de características que podem ser utilizados para categorizar determinado grupo de linguagens. Um paradigma pode oferecer técnicas apropriadas para uma aplicação específica.<br>
-<br>
-<strong>PARADIGMAS PRINCIPAIS e SEUS SUBPARADIGMAS</strong><br>
-
-🔸 <strong>1. Paradigma Imperativo</strong><br>
-Neste paradigma, o programa descreve o processamento necessário para solucionar o problema. Assim, o paradigma imperativo é caracterizado por execução sequencial de instruções, pelo uso de variáveis que representam posições de memória e pelo uso de instruções de atribuição que alteram os valores dessas variáveis.<br>
-Vejamos alguns Subparadigmas do Paradigma Imperativo e exemplos linguagens de programação que adotam esses subparadigmas.<br>
-<br>
-🔸  1.1 Paradigma estruturado:  ALGOL 58 e ALGOL 60 <br>
-🔸  1.2 Paradigma concorrente: Java e Ada<br>
-🔸  1.3 Paradigma Orientado a Objetos: Smalltalk e Java<br>
-<br>
-🔹 <strong>2. Paradigma Declarativo</strong><br>
-Este paradigma é o modelo no qual os resultados são descritos, mas os passos para chegar aos resultados não são estabelecidos.<br>
-Vejamos alguns Subparadigmas do Paradigma Declarativo e exemplos linguagens de programação que adotam esses subparadigmas:<br>
-<br>
-🔹 2.1 Paradigma Funcional: Lisp e Haskell<br>
-🔹 2.2 Paradigma Lógico: Prolog<br>
-</p>
-
-<h2> 🤝 Contribuindo </h2>
-
-<p>
-Este repositório foi criado para fins de estudo, então contribua com ele.<br>
-Se te ajudei de alguma forma, ficarei feliz em saber. E caso você conheça alguém que se identidique com o conteúdo, não deixe de compatilhar.<br>
-<br>
-Se possível:<br>
-⭐️  Star o projeto<br>
-🐛 Encontrar e relatar issues<br>
-</p>
-
+✅ Java JDK 11 <br>
+✅ Spring Boot 2.6.2 <br>
+✅ Maven <br>
+✅ Banco de Dados H2 <br>
+✅ Lombok <br>
+✅ Model Mapper <br>
+✅ IDE Spring Tool Suite 4 <br>
+✅ Postman (Para testes dos endpoints) <br>
 
 
 ------------
 
-Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+<h2> 🧮 FUNCIONALIDADES DA API </h2>
+
+<p>
+<h3> 🔸 Cadastrar Cliente</h3><br>
+
+- **Verbo HTTP:** POST<br>
+- **Endpoint:** "/cliente"<br>
+
+<h3> 🔸 Buscar Lista de Cliente</h3> 
+
+- **Verbo HTTP:** GET<br>
+- **Endpoint:** "/cliente"<br>
+
+<h3> 🔸 Buscar Cliente por id</h3> 
+
+- **Verbo HTTP:** GET<br>
+- **Endpoint:** "/cliente/**id**"<br>
+
+<h3> 🔸 Login </h3> 
+
+- **Verbo HTTP:** GET<br>
+- **Endpoint:** "/login"<br>
+
+<h3> 🔸 Cadastrar Novo Empréstimo</h3> 
+
+- **Verbo HTTP:** POST<br>
+- **Endpoint:** "/emprestimo"<br>
+
+<h3> 🔸 Buscar Listagem de Empréstimos por id do cliente</h3> 
+
+- **Verbo HTTP:** GET<br>
+- **Endpoint:** "emprestimo/listagem/cliente?id=**inserir id do cliente**"<br>
+
+<h3> 🔸 Buscar Empréstimo Detalhado por id</h3> 
+
+- **Verbo HTTP:** GET<br>
+- **Endpoint:** "emprestimo/detalhe/**inserir id do emprestimo**"<br>
+
+------------
+
+Desenvolvido por [Guilherme Nascimento](https://www.linkedin.com/in/guilherme-nascimento-27091991/ "Guilherme Nascimento").
